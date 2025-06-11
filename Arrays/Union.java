@@ -27,7 +27,7 @@ public class Union {
             }
         }
 
-        return Collections ; 
+            return ans.stream().mapToInt(Integer::intValue).toArray(); 
     }
 
     // returns
