@@ -24,3 +24,5 @@ with log_time("Fetch stock data"):
 
 # with log_time("Fetch stock price"):
 #     response = requests.get("https://api.example.com/stocks/TCS")
+
+
