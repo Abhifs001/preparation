@@ -1,6 +1,8 @@
 import time
 from contextlib import contextmanager
 
+import requests
+
 @contextmanager
 def log_time(task_name):
     start = time.time()
@@ -11,6 +13,7 @@ def log_time(task_name):
 
 # Usage
 with log_time("Fetch stock data"):
+    response = requests.get("https://api.example.com/stocks/NSE")
     time.sleep(2)  # simulate API call
 
 
