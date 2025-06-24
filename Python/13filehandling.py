@@ -13,8 +13,6 @@ logging.basicConfig(
     filename  = 'file_handling.log',
     level = logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
-
-
 ) 
 #---------------------------READING FILE --------------------------
 def read_file(file_path):
@@ -55,7 +53,7 @@ def summarize_ipo_data(records):
 
 def write_summary_to_csv(summary, output_path):
     with open(output_path, 'w', newline='') as outputfile:
-        writer = csv.Writer(outputfile)
+        writer = csv.writer(outputfile)
         writer.writerow(['Company', 'Total Price'])
         for company, total_price in summary.items():
             writer.writerow([company, round(total_price, 2)])
@@ -78,7 +76,7 @@ def main():
 
         args = parser.parse_args()
 
-        logging.INFO(f"------------------------Ingesting file {args.inputfile}------------------------")
+        logging.info(f"------------------------Ingesting file {args.inputfile}------------------------")
 
         records  = read_file(args.inputfile)
         summary = summarize_ipo_data(records)
