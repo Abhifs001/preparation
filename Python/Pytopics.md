@@ -5,4 +5,9 @@
    - Reading large files with generators
    - Infinite generators
    - Chaining generators (pipelines)
-   -
+   -Lambda
+   -Exception Handling 
+   -Context Manager 
+   -File Handling
+   -Profiling
+   
